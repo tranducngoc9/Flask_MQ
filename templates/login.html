@@ -6,7 +6,16 @@
 {% block title %} Home page {% endblock %}
 
 {%block content %} 
-<h2>Day la Home page</h2>
+<h2>Day la Login page</h2>
+
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        {% for m in messages %}
+            <P>{{m}}</p>
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+        
 <!-- Tao ra 1 cai form -->
 <!-- cach le trai 50 pixel -->
 <div style="margin-left: 50px;"> <!-- cach le trai 50 pixel -->
